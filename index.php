@@ -17,50 +17,52 @@ $result = mysqli_query($con,$select);
 
 </head>
 <body>
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light bg-info">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <img src="nsti1.png" class="img-fluid rounded-pill" alt="" srcset="">
+    
+  <!-- <a class="navbar-brand" href="#">
       <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
       NSTI Dehradun
-    </a>
+    </a> -->
   </div>
 </nav>
     <form action="config.php" method="post">
 
-  <div class="m-3">
-    <label for="reg_no" class="form-label">Registraion Number: </label>
-    <input type="number" class="form-control" id="reg_no" name="Reg_No" placeholder="Registraion Number" required>
+  <div class="bg-info py-2 m-3" style="border: 3px solid black;border-radius: 10px 10px;">
+    <label for="reg_no" class="form-label m-2"><b>Registraion Number:</b> </label>
+    <input type="number" class="form-control bg-warning py-1" id="reg_no" name="Reg_No" placeholder="Registraion Number" required>
   </div>
 
-  <div class="m-3">
-    <label for="t_name" class="form-label">Trainee's Name: </label>
-    <input type="text" class="form-control" id="t_name" name="T_name" placeholder="Trainee's Name">
+  <div class="bg-info py-2 m-3" style="border: 3px solid black;border-radius: 10px 10px;">
+    <label for="t_name" class="form-label m-2">Trainee's Name: </label>
+    <input type="text" class="form-control bg-warning py-1" id="t_name" name="T_name" placeholder="Trainee's Name">
   </div>
 
-  <div class="m-3">
-    <label for="t_mobile" class="form-label">Mobile: </label>
-    <input type="number" class="form-control" id="t_mobile" name="Mobile" placeholder="Mobile">
+  <div class="bg-info py-2 m-3" style="border: 3px solid black;border-radius: 10px 10px;">
+    <label for="t_mobile" class="form-label m-2">Mobile: </label>
+    <input type="number" class="form-control bg-warning py-1" id="t_mobile" name="Mobile" placeholder="Mobile">
   </div>
 
-  <div class="m-3">
-    <label for="t_nsti" class="form-label">NSTI: </label>
-    <input type="text" class="form-control" id="t_nsti" name="nsti" placeholder="NSTI">
+  <div class="bg-info py-2 m-3" style="border: 3px solid black;border-radius: 10px 10px;">
+    <label for="t_nsti" class="form-label m-2">NSTI: </label>
+    <input type="text" class="form-control bg-warning py-1" id="t_nsti" name="nsti" placeholder="NSTI">
   </div>
 
-  <div class="m-3">
-    <label for="date" class="form-label">Date: </label>
-    <input type="date" class="form-control" id="date" name="date" placeholder="Date">
+  <div class="bg-info py-2 m-3" style="border: 3px solid black;border-radius: 10px 10px;">
+    <label for="date" class="form-label m-2">Date: </label>
+    <input type="date" class="form-control bg-warning py-1" id="date" name="date" placeholder="Date">
   </div>
  
-  <button type="submit" class="btn btn-primary m-3" name="Onclick">Submit</button>
-  <button type="submit" class="btn btn-primary m-3" name="Ondelete">Delete</button>
-  <button type="submit" class="btn btn-primary m-3" name="Onedit">Update</button>
+  <button type="submit" class="btn btn-success btn-lg m-3" name="Onclick">Submit</button>
+  <button type="submit" class="btn btn-danger btn-lg m-3" name="Ondelete">Delete</button>
+  <button type="submit" class="btn btn-info btn-lg m-3" name="Onedit">Update</button>
 </form>
 <div class="fluid-container">
     <div class="row m-3">
-    <h1 class="text-center">Read Table</h1>
-<table class="table table-hover table-bordered table-striped" > 
-    <tr>
+    <h1 class="text-center bg-info" style="border: 3px solid black;border-radius: 10px 10px;">ADIT Students Details</h1>
+<table class="table table-hover table-bordered table-striped text-center" > 
+    <tr class="bg-danger">
         <th>Registraion Number</th>
         <th>Trainee's Name</th>
         <th>Mobile</th>
@@ -70,7 +72,7 @@ $result = mysqli_query($con,$select);
     <?php
     while($data = mysqli_fetch_array($result))
     {
-        echo '<tr>';
+        echo '<tr class="bg-warning">';
         echo '<td>'.$data['reg_no'].'</td>';
         echo '<td>'.$data['trainee_name'].'</td>';
         echo '<td>'.$data['phone_no'].'</td>';
